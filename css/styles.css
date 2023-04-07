@@ -8038,6 +8038,10 @@ textarea.form-control-lg {
   border-radius: 0.3rem !important;
 }
 
+.rounded-9 {
+  border-radius: 1.3rem !important;
+}
+
 .rounded-circle {
   border-radius: 50% !important;
 }
@@ -11820,8 +11824,9 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  /* background-color: #212529; */
+    background-image: linear-gradient(rgba(12, 156, 39, 0.7),
+          rgba(0, 0, 0, 0.8)), url("../assets/img/form-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
