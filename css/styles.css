@@ -11483,24 +11483,25 @@ p {
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
-    font-size: 3.5em;
+    font-size: 2.5em;
     transition: font-size 0.3s ease-in-out;
   }
   #mainNav .navbar-brand img {
-    height: 2.3rem;
+    height: 6rem;
     transition: height 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #032b0a;
+    background-color: #032b0b;
+    
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    height: 2.9rem;
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
@@ -11509,13 +11510,21 @@ p {
     margin-right: 0;
   }
 }
+    .logo-img {
+      width: 450px;
+      height: auto;
+      object-fit: contain;
+    }
 header.masthead {
   padding-top: 5.5rem;
   padding-bottom: 2rem;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient( rgba(12, 156, 39, 0.5),
-  rgba(0, 0, 0, 0.1)),url("../assets/img/image.jpg");
+  background-image: linear-gradient( rgba(9, 9, 9, 0.9),
+  rgba(12,
+    156,
+    39,
+    0.5)),url("../assets/img/image.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11542,6 +11551,7 @@ header.masthead .masthead-heading {
     padding-bottom: 12.5rem;
   }
   header.masthead .masthead-subheading {
+    margin-top: 8rem;
     font-size: 2.25rem;
     font-style: italic;
     line-height: 2.25rem;
@@ -11549,7 +11559,7 @@ header.masthead .masthead-heading {
   }
   header.masthead .masthead-heading {
     font-size: 4.5rem;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 4.5rem;
     margin-bottom: 4rem;
   }
