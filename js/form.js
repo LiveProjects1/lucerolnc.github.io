@@ -26,5 +26,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }, function(error) {
       console.error('Email sending failed:', error);
       // Add your error handling code
+      alert('Failed!');
     });
 });
