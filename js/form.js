@@ -1,5 +1,5 @@
 // Initialize EmailJS with your user ID and the service ID
-emailjs.init('DdsYUVBy1yFNU7Aye');
+emailjs.init('jlF5Bc-nlBxZx2Kp9');
 
 // Add event listener to the form submit event
 document.getElementById('contactForm').addEventListener('submit', function(event) {
