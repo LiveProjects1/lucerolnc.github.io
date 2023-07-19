@@ -14,7 +14,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   };
 
   // Send the email
-  emailjs.send('service_cn169o9', 'template_bdpbhtr', formData, 'M-gPOvzf20ujCpnZd')
+  emailjs.send('service_vmqs3re', 'template_r18m69h', formData, 'jlF5Bc-nlBxZx2Kp9')
     .then(function(response) {
       console.log('Email sent successfully:', response.status, response.text);
       // Add your success message or redirect the user to a thank-you page
