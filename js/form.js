@@ -22,7 +22,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
        alert('Email sent successfully!');
 
        // Reset the form
-       document.getElementById('myForm').reset();
+       document.getElementById('contactForm').reset();
     }, function(error) {
       console.error('Email sending failed:', error);
       // Add your error handling code
