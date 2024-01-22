@@ -26,6 +26,11 @@ p{
    padding: 50px 30px;
    transition: all ease-in-out 0.4s;
    background: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 2%;
  }
 
  .services .icon-box .icon {
@@ -6839,6 +6844,9 @@ textarea.form-control-lg {
 
 .d-flex {
   display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .d-inline-flex {
