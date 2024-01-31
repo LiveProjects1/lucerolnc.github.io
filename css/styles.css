@@ -14,6 +14,7 @@
  /* Basic CSS  */
  .section-bg {
    background-color: #F6FBF4;
+   padding: 2rem;
  }
 p{
   font-family: "Trebuchet MS", Tahoma, sans-serif;
@@ -76,40 +77,63 @@ p{
 
  .section-title {
    text-align: center;
-   padding-bottom: 30px;
+   padding-bottom: 2vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
  }
 
  .section-title h2 {
-   font-size: 32px;
-   font-weight: bold;
-   text-transform: uppercase;
-   margin-bottom: 20px;
-   padding-bottom: 20px;
-   position: relative;
-   color: #032b0a;
- }
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #032b0a;
+  cursor:default;
+}
 
- .section-title h2::before {
-   content: "";
-   position: absolute;
-   display: block;
-   width: 120px;
-   height: 1px;
-   background: #ddd;
-   bottom: 1px;
-   left: calc(50% - 60px);
- }
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16vw;
+  height: 0.3vh;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 8vw);
+  /* transition: all 5s ease-in; */
+}
 
- .section-title h2::after {
-   content: "";
-   position: absolute;
-   display: block;
-   width: 40px;
-   height: 3px;
-   background: #0cf037;
-   bottom: 0;
-   left: calc(50% - 20px);
- }
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5vw;
+  height: 0.6vh;
+  background: #0cf037;
+  bottom: 0;
+  left: calc(50% - 2.5vw);
+  transition: all 0.5s ease-in;
+}
+
+.section-title h2:hover::after {
+  width: 16vw;
+  left: calc(50% - 8vw);
+}
+
+ /* .section-title h2::after:hover{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16vw;
+  height: 0.6vh;
+  background: #0cf037;
+  bottom: 0;
+  left: calc(50% - 8vw);
+ } */
 
  .section-title p {
    margin-bottom: 0;
@@ -181,8 +205,16 @@ p{
   }
 }
 
-body {
+body{
   margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.page-top {
+  display: block;
+  margin: 0;
+  padding : 0;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -4052,6 +4084,10 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+.highlightactive {
+  color: #0cf037 !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -4085,7 +4121,7 @@ textarea.form-control-lg {
   background-color: transparent;
   border-color: transparent;
 }
-.nav-tabs .nav-link.active,
+.nav-tabs,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
   background-color: #fff;
@@ -4102,7 +4138,7 @@ textarea.form-control-lg {
   border: 0;
   border-radius: 0.25rem;
 }
-.nav-pills .nav-link.active,
+.nav-pills,
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #ffc800;
@@ -4559,7 +4595,7 @@ textarea.form-control-lg {
   color: rgba(0, 0, 0, 0.3);
 }
 .navbar-light .navbar-nav .show > .nav-link,
-.navbar-light .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav {
   color: rgba(0, 0, 0, 0.9);
 }
 .navbar-light .navbar-toggler {
@@ -4594,7 +4630,7 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.25);
 }
 .navbar-dark .navbar-nav .show > .nav-link,
-.navbar-dark .navbar-nav .nav-link.active {
+.navbar-dark .navbar-nav{
   color: #fff;
 }
 .navbar-dark .navbar-toggler {
@@ -11403,7 +11439,7 @@ html {
   scroll-padding-top: 4.5rem;
 }
 
-body {
+.page-top {
   position: relative;
   overflow-x: hidden;
 }
@@ -11413,7 +11449,7 @@ p {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
@@ -11451,9 +11487,12 @@ p {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
   background-color: #032b0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -11468,6 +11507,7 @@ p {
   font-weight: 700;
   letter-spacing: 0.0625em;
   text-transform: uppercase;
+  padding: 0;
 }
 #mainNav .navbar-brand img {
   height: 1.5rem;
@@ -11481,6 +11521,7 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #0cf037;
 }
+
 
 @media (min-width: 992px) {
   #mainNav {
@@ -11502,6 +11543,7 @@ p {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #032b0b;
+    /* height: 12vh;*/
     
   }
   #mainNav.navbar-shrink .navbar-brand {
