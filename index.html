@@ -36,17 +36,19 @@
 
 
 </head>
-
-<body id="page-top">
+<body>
+    <div id="preloader">
+    </div>
+    <div class="page-top" id = "page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top"><img class="" src="assets/logo-nbg.png" alt="..." /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars ms-1"></i>
-            </button>
+            </button> -->
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item fw-bold"><a class="nav-link" href="#home">Home</a></li>
@@ -66,7 +68,7 @@
     </nav>
 
     <!-- Masthead-->
-    <header class="masthead" id="home">
+    <header class="masthead present-section" id="home">
         <div class="container">
             <!-- <img class="img-fluid pb-4 mb-4 fs-4" src="assets/logo-nbg.png" alt=""> -->
             <div class="masthead-subheading zoom">Welcome to Lucero Landscaping And Construction</div>
@@ -76,7 +78,7 @@
     </header>
 
     <!-- About -->
-    <section class="page-section " id="about"
+    <section class="page-section present-section" id="about"
         style="background-image: url(https://www.toptal.com/designers/subtlepatterns/uploads/leaves-pattern.png); ">
         <div class="">
             <div class="section-title">
@@ -115,7 +117,7 @@
 
 
     <!-- Services-->
-    <section class="page-section " id="service">
+    <section class="page-section present-section" id="service">
         <div class="container">
             <div class="section-title">
                 <h2 class="">Services</h2>
@@ -753,7 +755,7 @@
 
 
     <!-- Portfolio -->
-    <section class="gallery" id="portfolio">
+    <section class="gallery present-section" id="portfolio">
         <div class="section-title container">
             <h2>Portfolio</h2>
             <h5 class="section-subheading text-muted">Transforming Outdoor Spaces: See Our Stunning Portfolio of
@@ -902,15 +904,8 @@
     </section>
 
 
-
-
-
-
-
-
-
     <!-- ======= Testimonials ======= -->
-    <section class="services section-bg" id="testinomial">
+    <section class="services section-bg present-section" id="testinomial">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -1006,15 +1001,15 @@
 
     <!-- blog contents -->
 
-    <div class="container my-5" id="blogs">
+    <div class="container my-5 present-section" id="blogs">
         <div class="section-title">
             <h2 class="">Our Latest Blogs</h2>
             <h5 class="section-subheading text-muted">Explore the Art and Science of Landscaping: Get Informed, Stay
                 Inspired with Our Expert Blog!</h5>
         </div>
-        <div class="row ">
+        <div class="row blog-grid">
 
-            <div class="col-md-4 p-4">
+            <div class="col-md-4 p-4 blog-card">
                 <div class="border">
                     <div class="position-relative w-100"
                         style="height: 250px;background-image: url(https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=1260); background-size: cover; background-position: center;">
@@ -1049,7 +1044,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 p-4">
+            <div class="col-md-4 p-4 blog-card">
                 <div class="border">
                     <div class="position-relative w-100"
                         style="height: 250px;background-image: url(https://images.pexels.com/photos/450064/pexels-photo-450064.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover; background-position: center;">
@@ -1087,7 +1082,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4 p-4">
+            <div class="col-md-4 p-4 blog-card">
                 <div class="border">
                     <div class="position-relative w-100"
                         style="height: 250px;background-image: url(https://images.pexels.com/photos/733205/pexels-photo-733205.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-size: cover; background-position: center;">
@@ -1124,8 +1119,6 @@
             </div>
         </div>
     </div>
-
-
 
     <!-- Steps-->
     <section class="page-section section-bg" id="#">
@@ -1223,12 +1216,6 @@
             </ul>
         </div>
     </section>
-
-
-
-
-
-
 
 
     <!-- Team-->
@@ -1395,9 +1382,6 @@
     </section>
 
 
-
-
-
     <footer class="main-footer">
         <div class="container">
             <div class="footer-content">
@@ -1479,20 +1463,14 @@
             </div>
         </div>
     </div>
+    </div>
 
-
-
-
-
-
-    <!-- Bootstrap core JS-->
-
-
+        <!-- Bootstrap core JS-->
 
     <!-- Core theme JS-->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
+    </script>
     <script src="js/form.js"></script>
     <script src="js/scripts.js"></script>
 
@@ -1521,6 +1499,20 @@
                 });
             }
         });
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            setTimeout(() => {
+                // transform the display to none but by decreasing opacity in a duration of 0.5 seconds and then make its display as none
+                loader.style.transition = "opacity 0.5s ease";
+                loader.style.opacity = "0";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500);
+            }, 1000);
+        })
     </script>
 
 
